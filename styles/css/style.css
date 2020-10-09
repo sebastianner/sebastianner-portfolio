@@ -127,6 +127,18 @@ nav figure{
 
 .hero-container figure{
     margin: 0;
+
+}
+
+.hero-container figure img{
+    width: 100%;
+    height:auto;
+    max-width:299.55px;
+    max-height: 315px;
+    min-width:250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-name h1{
@@ -183,8 +195,18 @@ nav figure{
 }
 
 .about figure{
-    padding: 0;
     margin: 0;
+}
+
+.about figure img{
+    width: 100%;
+    height:auto;
+    max-width:581px;
+    max-height: 400px;
+    min-width:250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .skills{
