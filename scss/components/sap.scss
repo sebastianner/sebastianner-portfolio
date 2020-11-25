@@ -1,0 +1,56 @@
+.sap{
+    position: relative;
+    height: auto;
+    background-color: $secondary-light-background;
+    border-radius: 16px;
+    margin: auto;
+    margin-top: -200px;
+    padding: 25px 50px;
+    width: 85vw;
+    max-width: 1300px;
+
+    .sap-text-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        h2{
+            font-size: 45px;
+            color: $brand-color;
+            font-weight: bolder;
+            font-family: $lato-font;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        p{
+            font-size: 20px;
+            color: $secondary-text-color;
+            font-weight: 400;
+            font-family: $poppins-font;
+            text-align: center;
+            margin: 0 20px;
+            width: 500px;
+        }
+
+        a{
+            font-size: 22.5px;
+            color: $secondary-text-color;
+            font-weight: 700;
+            font-family: $lato-font;
+            text-align: center;
+            border: 5px solid $brand-color;
+            text-decoration: none;
+            border-radius: 50px;
+            padding: 10px 30px;
+            transition: .6s;
+            text-align: center;
+            
+            &:hover{
+                background-color: $brand-color;
+                transition: .6s;
+            }
+        }
+    }
+}

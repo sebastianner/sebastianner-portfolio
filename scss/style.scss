@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,800&display=swap');
+@import 'lib/breakepoints';
+@import 'lib/variables';
+@import 'components/header';
+@import 'components/hero';
+@import 'components/about';
+@import 'components/skills';
+@import 'components/work';
+@import 'components/contact';
+@import 'components/sap';
+@import 'components/logo';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $main-background;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-menu{
+    width: 100vw;
+    position: fixed;
+    right: -100vw;
+    background-color: $main-background;
+    background-image: url("/resources/cube-background.png");
+    background-size: 45px;
+    background-position: center;
+    z-index: 4;
+    transition: .4s;
+
+    ul{
+        li{
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.is-active{
+   right: 0;
+}
+
+.burger-menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    list-style-type: none;
+}
+
+.burger-menu ul li a{
+    font-size: 2em;
+    margin-bottom: 100px;
+}
+
+.icon-x{
+    font-size: 40px;
+    color: $secondary-text-color;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.icon-burger-menu{
+    width: 40px;
+    height: 40px;
+    color: $secondary-text-color;
+    font-size: 30px;
+    display: none;
+
+    @include media('<=phone'){
+        display: block;
+    }
+}

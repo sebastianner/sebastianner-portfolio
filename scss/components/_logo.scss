@@ -1,0 +1,30 @@
+.logo{
+    height: 500px;
+    margin-top: 0;
+    background-color: $main-light-background;
+
+    .logo-container{
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        figure{
+            margin: 0;
+        }
+
+        p{
+            margin: 0;
+            text-align: center;
+            color: $secondary-text-color;
+            font-family: $poppins-font;
+            font-weight: 500;
+            font-size: 20px;
+        }
+    }
+
+    @include media('<=phone'){
+        height: 900px;
+    }
+}

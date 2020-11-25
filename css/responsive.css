@@ -122,6 +122,7 @@
         display: none;
     }
 }
+
 @media screen and (max-width:356px){
     .logo{
         height: 900px;

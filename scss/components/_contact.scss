@@ -1,0 +1,30 @@
+.contact{
+    height: auto;
+    background-color: $brand-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+
+    p{
+        margin: 0;
+        color: $third-text-color;
+        font-family: $poppins-font;
+        font-weight: 600;
+        font-size: 20px;    
+    }
+
+    .contact-icons{
+        a{
+            color: $third-text-color;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+
+        i{
+            font-size: 50px;
+        }
+    }
+}
