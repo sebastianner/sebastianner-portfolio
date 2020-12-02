@@ -42,7 +42,7 @@
                 opacity: 1;
                 margin: 0 43px;
 
-                @include media('>=phone'){
+                @include media('<=phone'){
                     margin: 21px 43px;
                 }
             }
