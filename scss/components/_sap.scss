@@ -4,7 +4,7 @@
     background-color: $secondary-light-background;
     border-radius: 16px;
     margin: auto;
-    margin-top: -270px;
+    margin-top: -200px;
     padding: 25px 50px;
     width: 85vw;
     max-width: 1300px;
@@ -84,5 +84,6 @@
 
     @include media('<=phone'){
         width: 55vw;
+        padding: 25px 40px;
     }
 }
