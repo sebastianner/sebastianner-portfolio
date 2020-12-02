@@ -36,8 +36,10 @@ body{
     ul{
         li{
             a{
-                color: white;
+                color: $secondary-text-color;
                 text-decoration: none;
+                font-family: $lato-font;
+                font-weight: 600;
             }
         }
     }
@@ -75,7 +77,7 @@ body{
     font-size: 30px;
     display: none;
 
-    @include media('<=phone'){
+    @include media('<=425px'){
         display: block;
     }
 }

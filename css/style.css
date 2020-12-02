@@ -34,7 +34,7 @@ header {
         font-size: 19px;
         font-family: "Poppins", sans-serif;
         font-weight: 600; }
-      @media (max-width: 320px) {
+      @media (max-width: 425px) {
         header .navbar ul li {
           display: none; } }
 
@@ -114,9 +114,11 @@ header {
       display: flex;
       justify-content: flex-end;
       margin: 0; }
-      @media (min-width: 768px) {
+      @media (max-width: 768px) {
         .about .about-text-container h2 {
-          justify-content: center; } }
+          text-align: center;
+          justify-content: center;
+          margin: 0 auto; } }
     .about .about-text-container p {
       font-size: 25px;
       color: #D0D0D2;
@@ -126,16 +128,21 @@ header {
       width: 635px;
       height: 255px;
       margin: 5px 0; }
-      @media (min-width: 768px) {
+      @media (max-width: 768px) {
         .about .about-text-container p {
-          text-align: center; } }
-  @media (min-width: 768px) {
+          text-align: center;
+          width: 85%;
+          height: fit-content;
+          margin: 0 auto;
+          margin-top: 10px;
+          margin-bottom: 10px; } }
+  @media (max-width: 768px) {
     .about {
       flex-wrap: wrap-reverse; } }
 
 .skills {
   background-color: #28B2B5;
-  height: 300px;
+  height: 350px;
   padding: 30px 0; }
   .skills h2 {
     font-family: "Poppins", sans-serif;
@@ -156,7 +163,9 @@ header {
     .skills .apps figure {
       margin: 0 50px;
       transition: 0.6s;
-      opacity: .5; }
+      opacity: .5;
+      margin-top: 20px;
+      margin-bottom: 20px; }
       .skills .apps figure img {
         transition: .6s; }
         .skills .apps figure img:hover {
@@ -166,6 +175,13 @@ header {
       .skills .apps figure:hover {
         opacity: 1;
         margin: 0 43px; }
+        @media (min-width: 320px) {
+          .skills .apps figure:hover {
+            margin: 21px 43px; } }
+      @media (min-width: 768px) {
+        .skills .apps figure {
+          margin-top: 20px;
+          margin-bottom: 10px; } }
     .skills .apps .app {
       font-size: 85px;
       filter: drop-shadow(0 0 10px #555555);
@@ -173,6 +189,9 @@ header {
       .skills .apps .app:hover {
         font-size: 100px;
         transition: 0.6s; }
+  @media screen and (max-width: 572px) {
+    .skills {
+      height: fit-content; } }
 
 .work {
   height: auto;
@@ -180,7 +199,7 @@ header {
   background-image: url("/resources/cube-background.png");
   background-size: 45px;
   background-position: center;
-  padding: 50px 0 130px 0; }
+  padding: 50px 0 220px 0; }
   .work h2 {
     margin: 0;
     margin-top: 10px;
@@ -201,16 +220,22 @@ header {
     padding-bottom: 130px; }
     .work .work-cards .card {
       height: 350px;
-      width: 400px;
+      width: fill;
       border: 1px solid black;
       background-color: #fff;
       box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75); }
+      @media (max-width: 425px) {
+        .work .work-cards .card {
+          height: 300px; } }
       @media (max-width: 320px) {
         .work .work-cards .card {
           height: 250px; } }
-    @media screen and (max-width: 1440px) {
+    @media (max-width: 1440px) {
       .work .work-cards {
         grid-template-columns: repeat(auto-fill, 400px); } }
+    @media (max-width: 572px) {
+      .work .work-cards {
+        grid-template-columns: repeat(auto-fill, 80vw); } }
 
 .contact {
   height: auto;
@@ -240,7 +265,7 @@ header {
   background-color: #242933;
   border-radius: 16px;
   margin: auto;
-  margin-top: -200px;
+  margin-top: -270px;
   padding: 25px 50px;
   width: 85vw;
   max-width: 1300px; }
@@ -256,6 +281,12 @@ header {
       font-family: "Lato", sans-serif;
       margin: 0;
       margin-bottom: 20px; }
+      @media (max-width: 768px) {
+        .sap .sap-text-container h2 {
+          margin: 0; } }
+      @media (max-width: 320px) {
+        .sap .sap-text-container h2 {
+          font-size: 35px; } }
     .sap .sap-text-container p {
       font-size: 20px;
       color: #D0D0D2;
@@ -264,6 +295,12 @@ header {
       text-align: center;
       margin: 0 20px;
       width: 500px; }
+      @media (max-width: 768px) {
+        .sap .sap-text-container p {
+          margin: 30px 10px; } }
+      @media (max-width: 572px) {
+        .sap .sap-text-container p {
+          margin: 30px 0; } }
     .sap .sap-text-container a {
       font-size: 22.5px;
       color: #D0D0D2;
@@ -279,6 +316,23 @@ header {
       .sap .sap-text-container a:hover {
         background-color: #28B2B5;
         transition: .6s; }
+      @media (max-width: 320px) {
+        .sap .sap-text-container a {
+          font-size: 20px; } }
+    @media (max-width: 572px) {
+      .sap .sap-text-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center; } }
+  @media (max-width: 768px) {
+    .sap {
+      width: 80vw; } }
+  @media (max-width: 572px) {
+    .sap {
+      width: 60vw; } }
+  @media (max-width: 320px) {
+    .sap {
+      width: 55vw; } }
 
 .logo {
   height: 500px;
@@ -289,7 +343,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    margin: 0 10px; }
     .logo .logo-container figure {
       margin: 0; }
     .logo .logo-container p {
@@ -299,6 +354,12 @@ header {
       font-family: "Poppins", sans-serif;
       font-weight: 500;
       font-size: 20px; }
+    @media (max-width: 572px) {
+      .logo .logo-container {
+        margin-top: 30px; } }
+  @media (max-width: 572px) {
+    .logo {
+      height: 800px; } }
   @media (max-width: 320px) {
     .logo {
       height: 900px; } }
@@ -323,8 +384,10 @@ body {
   z-index: 4;
   transition: .4s; }
   .burger-menu ul li a {
-    color: white;
-    text-decoration: none; }
+    color: #D0D0D2;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 600; }
 
 .is-active {
   right: 0; }
@@ -354,6 +417,6 @@ body {
   color: #D0D0D2;
   font-size: 30px;
   display: none; }
-  @media (max-width: 320px) {
+  @media (max-width: 425px) {
     .icon-burger-menu {
       display: block; } }

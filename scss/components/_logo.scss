@@ -9,6 +9,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 10px;
 
         figure{
             margin: 0;
@@ -22,6 +23,13 @@
             font-weight: 500;
             font-size: 20px;
         }
+        @include media('<=572px'){
+            margin-top: 30px;
+        }
+    }
+
+    @include media('<=572px'){
+        height: 800px;
     }
 
     @include media('<=phone'){

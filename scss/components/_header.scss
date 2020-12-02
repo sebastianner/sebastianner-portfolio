@@ -40,7 +40,7 @@ header{
             }
 
             li{
-                @include media('<=phone'){
+                @include media('<=425px'){
                     display: none;
                 }
             }

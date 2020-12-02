@@ -35,8 +35,10 @@
             justify-content: flex-end;
             margin: 0;
 
-            @include media('>=tablet'){
+            @include media('<=tablet'){
+                text-align: center;
                 justify-content: center;
+                margin: 0 auto;
             }
         }
         p{
@@ -49,13 +51,18 @@
             height: 255px;
             margin: 5px 0;
 
-            @include media('>=tablet'){
+            @include media('<=tablet'){
                 text-align: center;
+                width: 85%;
+                height: fit-content;
+                margin: 0 auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
         }
     } 
 
-    @include media('>=tablet'){
+    @include media('<=tablet'){
         flex-wrap: wrap-reverse;
     }
 }
