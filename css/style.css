@@ -364,6 +364,9 @@ header {
     align-items: center; }
     .logo .logo-container figure {
       margin: 0; }
+    @media (max-width: 572px) {
+      .logo .logo-container figure {
+        margin-top: 60px; } }
     .logo .logo-container p {
       margin: 0;
       text-align: center;
