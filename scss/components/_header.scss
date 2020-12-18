@@ -42,6 +42,10 @@ header{
             li{
                 @include media('<=425px'){
                     display: none;
+
+                    &:nth-of-type(4){
+                        display: block;
+                    }
                 }
             }
         }

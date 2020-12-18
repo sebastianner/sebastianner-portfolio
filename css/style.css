@@ -36,7 +36,9 @@ header {
         font-weight: 600; }
       @media (max-width: 425px) {
         header .navbar ul li {
-          display: none; } }
+          display: none; }
+          header .navbar ul li:nth-of-type(4) {
+            display: block; } }
 
 .hero {
   background-image: url("/resources/cube-background.png");
@@ -162,7 +164,7 @@ header {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-size: 50px;
-    color: #ECECEC;
+    color: #fdfdfd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -265,12 +267,12 @@ header {
   text-align: center; }
   .contact p {
     margin: 0;
-    color: #ECECEC;
+    color: #fdfdfd;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 20px; }
   .contact .contact-icons a {
-    color: #ECECEC;
+    color: #fdfdfd;
     text-decoration: none;
     margin-right: 5px; }
   .contact .contact-icons i {
