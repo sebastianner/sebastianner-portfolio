@@ -1,0 +1,74 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  height: 100vh;
+  background-color: #21212B;
+  background-image: url("/resources/cube-background.png");
+  background-size: 45px;
+  background-position: center;
+  height: auto;
+  color: white; }
+
+.container {
+  padding: 14.5rem 0 1rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .container .project-preview {
+    width: 935px;
+    height: 50rem;
+    background-image: url("/static/preview4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative; }
+  .container .arrow {
+    font-size: 6rem;
+    margin: 0;
+    position: absolute;
+    top: 44%;
+    color: white;
+    text-decoration: none; }
+  .container .prev {
+    left: -3rem; }
+  .container .next {
+    right: -3rem; }
+  .container h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 5.3rem;
+    padding: 0rem;
+    color: #fdfdfd; }
+  .container p {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 88rem;
+    padding: 0 0 1.5rem;
+    color: #D0D0D2;
+    font-weight: 550; }
+  .container .icons-container {
+    padding: 0 0 4rem; }
+    .container .icons-container i {
+      font-size: 6rem; }
+  .container .buttons-container {
+    padding-bottom: 5rem; }
+    .container .buttons-container a {
+      padding: 10px;
+      outline: none;
+      border: 4px solid #28B2B5;
+      background-color: #242933;
+      border-radius: 5px;
+      margin-left: 15px;
+      text-decoration: none;
+      color: #fdfdfd;
+      font-size: 2rem;
+      transition: .6s;
+      font-family: "Lato", sans-serif;
+      font-weight: 600; }
+      .container .buttons-container a:hover {
+        background-color: #28B2B5;
+        transition: .6s; }
+    .container .buttons-container:nth-last-of-type(1) {
+      margin-right: 3rem; }
