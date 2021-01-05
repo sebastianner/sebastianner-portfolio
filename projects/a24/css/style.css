@@ -1,3 +1,65 @@
+header {
+  width: 100%; }
+  header .navbar {
+    top: 0;
+    background-color: #21212B;
+    background-image: url("/resources/cube-background.png");
+    background-size: 45px;
+    background-position: top;
+    height: auto;
+    box-shadow: 1px 5px 10px #07010199;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: top .6s;
+    z-index: 3; }
+    header .navbar figure {
+      margin: 0; }
+    header .navbar ul {
+      display: flex;
+      text-decoration: none;
+      list-style: none; }
+      header .navbar ul a {
+        text-decoration: none;
+        color: #D0D0D2;
+        height: auto;
+        padding: 0 10px;
+        font-size: 19px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600; }
+      @media (max-width: 425px) {
+        header .navbar ul li {
+          display: none; }
+          header .navbar ul li:nth-of-type(4) {
+            display: block; } }
+
+.contact {
+  height: auto;
+  background-color: #28B2B5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center; }
+  .contact p {
+    margin: 0;
+    color: #fdfdfd;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px; }
+  .contact .contact-icons a {
+    color: #fdfdfd;
+    text-decoration: none;
+    margin-right: 5px; }
+  .contact .contact-icons i {
+    font-size: 50px; }
+
 html {
   font-size: 62.5%; }
 
@@ -39,21 +101,22 @@ body {
     font-family: "Poppins", sans-serif;
     font-size: 5.3rem;
     padding: 0rem;
-    color: #fdfdfd; }
+    color: #28B2B5;
+    margin: 2rem 0 0 0; }
   .container p {
     font-family: "Poppins", sans-serif;
     font-size: 2.5rem;
     text-align: center;
-    width: 88rem;
-    padding: 0 0 1.5rem;
+    width: 90rem;
+    margin: 1rem 0 2rem;
     color: #D0D0D2;
     font-weight: 550; }
   .container .icons-container {
-    padding: 0 0 4rem; }
+    margin: 0 0 4rem; }
     .container .icons-container i {
       font-size: 6rem; }
   .container .buttons-container {
-    padding-bottom: 5rem; }
+    margin-bottom: 6rem; }
     .container .buttons-container a {
       padding: 10px;
       outline: none;
@@ -71,4 +134,52 @@ body {
         background-color: #28B2B5;
         transition: .6s; }
     .container .buttons-container:nth-last-of-type(1) {
-      margin-right: 3rem; }
+      margin-right: 2.5rem; }
+
+.burger-menu {
+  width: 100vw;
+  position: fixed;
+  right: -100vw;
+  background-color: #21212B;
+  background-image: url("/resources/cube-background.png");
+  background-size: 45px;
+  background-position: center;
+  z-index: 4;
+  transition: .4s; }
+  .burger-menu ul li a {
+    color: #D0D0D2;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 600; }
+
+.is-active {
+  right: 0; }
+
+.burger-menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  list-style-type: none; }
+
+.burger-menu ul li a {
+  font-size: 2em;
+  margin-bottom: 100px; }
+
+.icon-x {
+  font-size: 40px;
+  color: #D0D0D2;
+  position: absolute;
+  top: 30px;
+  right: 30px; }
+
+.icon-burger-menu {
+  width: 40px;
+  height: 40px;
+  color: #D0D0D2;
+  font-size: 30px;
+  display: none; }
+  @media (max-width: 425px) {
+    .icon-burger-menu {
+      display: block; } }

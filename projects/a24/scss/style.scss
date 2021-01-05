@@ -1,4 +1,6 @@
 @import "./scss/lib/variables","./scss/lib/variables","./scss/lib/breakepoints";
+@import "./scss/components/header","./scss/components/contact";
+@import "./scss/lib/mixin.scss";
 
 html{
     font-size: 62.5%;
@@ -51,28 +53,29 @@ body{
         font-family: $poppins-font;
         font-size: 5.3rem;
         padding: 0rem;
-        color: $third-text-color;
+        color: $brand-color;
+        margin: 2rem 0 0 0;
     }
 
     p{
         font-family: $poppins-font;
         font-size: 2.5rem;
         text-align: center;
-        width: 88rem;
-        padding: 0 0 1.5rem;
+        width: 90rem;
+        margin: 1rem 0 2rem;
         color: $secondary-text-color;
         font-weight: 550;
     }
 
     .icons-container{
-        padding: 0 0 4rem;
+        margin: 0 0 4rem;
         i{
             font-size: 6rem;
         }
     }
 
     .buttons-container{
-        padding-bottom: 5rem;
+        margin-bottom: 6rem;
         a{
             padding: 10px;
             outline: none;
@@ -93,7 +96,9 @@ body{
                 }
             }
             &:nth-last-of-type(1){
-                margin-right: 3rem;
+                margin-right: 2.5rem;
             }
         }
 }
+
+@include burger-menu
