@@ -17,7 +17,7 @@ body{
 }
 
 .container{
-    padding: 14.5rem 0 1rem;
+    padding: 157px 0 0 10px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@ body{
 
     .project-preview{
         width: 935px;
-        height: 50rem;
+        height: 500px;
         background-image: url("/static/preview4.png");
         background-repeat: no-repeat;
         background-position: center;
@@ -34,7 +34,7 @@ body{
     }
 
     .arrow{
-        font-size: 6rem;
+        font-size: 60px;
         margin: 0;
         position: absolute;
         top: 44%;
@@ -43,18 +43,18 @@ body{
     }
 
     .prev{
-        left: -3rem;
+        left: -30px;
     }
 
     .next{
-        right: -3rem;
+        right: -30px;
     }
     h2{
         font-family: $poppins-font;
         font-size: 5.3rem;
-        padding: 0rem;
+        padding: 0;
         color: $brand-color;
-        margin: 2rem 0 0 0;
+        margin: 20px 0 0 0;
     }
 
     p{
@@ -68,14 +68,14 @@ body{
     }
 
     .icons-container{
-        margin: 0 0 4rem;
+        margin: 0 0 40px;
         i{
             font-size: 6rem;
         }
     }
 
     .buttons-container{
-        margin-bottom: 6rem;
+        margin-bottom: 60px;
         a{
             padding: 10px;
             outline: none;
