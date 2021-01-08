@@ -250,9 +250,10 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.345);
-        display: none;
-        text-align: center; }
+        background-color: rgba(0, 0, 0, 0);
+        display: block;
+        text-align: center;
+        transition: .6s; }
         .work .work-cards .card span a {
           position: relative;
           top: 50%;
@@ -264,12 +265,16 @@ header {
           border-radius: .3rem;
           padding: .5rem;
           transition: .6s;
-          font-weight: 550; }
+          font-weight: 550;
+          display: none; }
           .work .work-cards .card span a:hover {
             background-color: #28B2B5;
             transition: .6s; }
       .work .work-cards .card:hover span {
-        display: block; }
+        transition: .6s;
+        background-color: rgba(0, 0, 0, 0.345); }
+        .work .work-cards .card:hover span a {
+          display: initial; }
       .work .work-cards .card:nth-of-type(1) {
         background-color: black;
         background-image: url("/static/prv8.png");

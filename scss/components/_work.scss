@@ -41,9 +41,10 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: rgba(0, 0, 0, 0.345);
-                display: none;
+                background-color: rgba(0, 0, 0, 0);
+                display: block;
                 text-align: center;
+                transition: .6s;
 
                 a{
                     position: relative;
@@ -57,6 +58,7 @@
                     padding: .5rem;
                     transition: .6s;
                     font-weight: 550;
+                    display: none;
 
                     &:hover{
                         background-color: $brand-color;
@@ -67,7 +69,12 @@
 
             &:hover{
                 span{
-                    display: block;
+                    transition: .6s;
+                    background-color: rgba(0, 0, 0, 0.345);
+                    
+                    a{
+                        display: initial;
+                    }
                 }
             }
             &:nth-of-type(1){
