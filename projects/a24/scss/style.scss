@@ -23,9 +23,6 @@ body{
 
 .container{
     height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding-top: 100px;
 
     .project-preview{
@@ -37,7 +34,14 @@ body{
         background-position: center;
         background-size: contain;
         position: relative;
-        padding: 0 0 100px 0;
+        padding: 40px 0;
+        margin: 0 auto;
+        @include media('<=425px'){
+            background-image: url("/static/preview-phone.png");
+            padding: 0;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
     }
 
     .arrow{
@@ -58,56 +62,56 @@ body{
     }
     .text-container{
         width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 1fr .5fr;
-        gap: 0;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         background-color: $main-light-background;
-        h2{
-            font-family: $poppins-font;
-            font-size: 6.5rem;
-            padding: 0;
-            color: $brand-color;
-        }
 
-        p{
-            margin: 0 auto;
-            padding: 40px 0 0 0;
-            font-family: $poppins-font;
-            font-size: 2.5rem;
-            text-align: center;
-            max-width: 900px;
-            color: $secondary-text-color;
-            font-weight: 550;
-        }
-
-        .icons-container{
-            margin: 0 0 0;
-            display: grid;
-            grid-template-columns: repeat(2,7rem);
-            grid-template-rows: 1fr .5fr;
-            column-gap: 15px;
-            row-gap: 10px;
+        .details-container{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
             align-items: center;
-            justify-content: center;
-                i{
-                    font-size: 5.5rem;
-                }
+
+            h2{
+                font-family: $poppins-font;
+                font-size: 6.5rem;
+                color: $brand-color;
+                margin: 0 30px;
+            }
+    
+            p{
+                font-family: $poppins-font;
+                font-size: 2.5rem;
+                text-align: center;
+                max-width: 900px;
+                color: $secondary-text-color;
+                font-weight: 550;
+            }
+
+            .icons-container{
+                display: grid;
+                column-gap: 10px;
+                margin: 0 30px;
+                grid-template-columns: repeat(2,55px);
+                    i{
+                        font-size: 5.5rem;
+                    }
+            }
         }
 
         .buttons-container{
-            grid-column: 2;
+            margin-top: 30px;
             a{
+                margin-right: 5px;
                 padding: 10px;
                 outline: none;
                 border: 4px solid $brand-color;
                 background-color: transparent;
                 border-radius: 5px;
-                margin-left: 15px;
                 text-decoration: none;
                 color: $third-text-color;
                 font-size: 2rem;
@@ -120,93 +124,35 @@ body{
                         transition: .6s;
                     }
                 }
-                &:nth-last-of-type(1){
-                    margin-right: 2.5rem;
-                }
-            }
-        }
-        @include media("<=tablet"){
-            .project-preview{
-                width: 635px;
-                height: 500px;
-            }
-            .text-container{
-                grid-template-columns: .5fr 2fr .5fr;
-                grid-template-rows: 100px 350px 200px 300px;
-
-                h2{
-                    grid-row: 1;
-                    grid-column: 2;
-                }
-                p{
-                    grid-row: 2;
-                    grid-column: 2;
-                    padding: 0;
-                    font-size: 2.1rem;
-                }
-                .icons-container{
-                    grid-row: 3;
-                    grid-column: 2;
-                }
-                .buttons-container{
-                    grid-row: 4;
-                    grid-column: 2;
-                }
-
-            }
-        }
-
-        @include media("<=425px"){
-            padding-top: 115px;
-
-            .project-preview{
-                width: 65%;
-                height: 500px;
-                background-image: url("/static/preview-phone.png");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-                position: relative;
-                padding: 0 0 100px 0;
-            }
-            .text-container{
-                grid-template-rows: 100px 350px 200px 200px;
-                h2{
-                    font-size: 5.5rem;
-                }
-                p{
-                    font-size: 2rem;
-                }
-                .buttons-container{
+                @include media('<=425px'){
                     display: flex;
                     flex-direction: column;
-                    a{
-                        padding: 10px;
-                        outline: none;
-                        border: 4px solid $brand-color;
-                        background-color: transparent;
-                        border-radius: 5px;
-                        text-decoration: none;
-                        color: $third-text-color;
-                        font-size: 2rem;
-                        transition: .6s;
-                        font-family: $lato-font;
-                        font-weight: 600;
-
-                        &:nth-child(1){
-                            margin-bottom: 15px;
-                        }
-                    }
+                    margin: 0 0 20px 0;
+                }
             }
-            
         }
-    }
-    
-    @include media("<=phone"){
-        padding-top: 50px;
-        .text-container{
-            grid-template-rows: 100px 350px 200px 200px;
+        @include media('<=tablet'){
+            .text-container{
+                height: fit-content;
+            }
+            .details-container{
+                flex-direction: column;
+                padding: 20px 0;
+                p{
+                    max-width: 700px !important;
+                    margin: 15px 20px;
+                }
+                .icons-container{
+                    grid-template-columns: repeat(4,55px) !important;
+                }
+            }
+            .buttons-container{
+                margin-top: 0;
+                margin-bottom: 60px;
+                a{
+                    margin-bottom: 8px;
+                }
+            }
         }
-    }
 }
 @include burger-menu

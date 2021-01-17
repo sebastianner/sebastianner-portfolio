@@ -425,6 +425,9 @@ header {
   margin: 0;
   padding: 0; }
 
+html {
+  font-size: 62.5%; }
+
 body {
   background-color: #21212B;
   padding: 0;
@@ -458,7 +461,7 @@ body {
   list-style-type: none; }
 
 .burger-menu ul li a {
-  font-size: 2em;
+  font-size: 3.2em;
   margin-bottom: 100px; }
 
 .icon-x {

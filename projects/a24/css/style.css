@@ -78,9 +78,6 @@ body {
 
 .container {
   height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 100px; }
   .container .project-preview {
     width: 80%;
@@ -91,7 +88,14 @@ body {
     background-position: center;
     background-size: contain;
     position: relative;
-    padding: 0 0 100px 0; }
+    padding: 40px 0;
+    margin: 0 auto; }
+    @media (max-width: 425px) {
+      .container .project-preview {
+        background-image: url("/static/preview-phone.png");
+        padding: 0;
+        margin-top: 40px;
+        margin-bottom: 40px; } }
   .container .arrow {
     font-size: 60px;
     margin: 0;
@@ -105,49 +109,46 @@ body {
     right: -30px; }
   .container .text-container {
     width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr .5fr;
-    gap: 0;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #2B313F; }
-    .container .text-container h2 {
-      font-family: "Poppins", sans-serif;
-      font-size: 6.5rem;
-      padding: 0;
-      color: #28B2B5; }
-    .container .text-container p {
-      margin: 0 auto;
-      padding: 40px 0 0 0;
-      font-family: "Poppins", sans-serif;
-      font-size: 2.5rem;
-      text-align: center;
-      max-width: 900px;
-      color: #D0D0D2;
-      font-weight: 550; }
-    .container .text-container .icons-container {
-      margin: 0 0 0;
-      display: grid;
-      grid-template-columns: repeat(2, 7rem);
-      grid-template-rows: 1fr .5fr;
-      column-gap: 15px;
-      row-gap: 10px;
-      align-items: center;
-      justify-content: center; }
-      .container .text-container .icons-container i {
-        font-size: 5.5rem; }
+    .container .text-container .details-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+      .container .text-container .details-container h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 6.5rem;
+        color: #28B2B5;
+        margin: 0 30px; }
+      .container .text-container .details-container p {
+        font-family: "Poppins", sans-serif;
+        font-size: 2.5rem;
+        text-align: center;
+        max-width: 900px;
+        color: #D0D0D2;
+        font-weight: 550; }
+      .container .text-container .details-container .icons-container {
+        display: grid;
+        column-gap: 10px;
+        margin: 0 30px;
+        grid-template-columns: repeat(2, 55px); }
+        .container .text-container .details-container .icons-container i {
+          font-size: 5.5rem; }
     .container .text-container .buttons-container {
-      grid-column: 2; }
+      margin-top: 30px; }
       .container .text-container .buttons-container a {
+        margin-right: 5px;
         padding: 10px;
         outline: none;
         border: 4px solid #28B2B5;
         background-color: transparent;
         border-radius: 5px;
-        margin-left: 15px;
         text-decoration: none;
         color: #fdfdfd;
         font-size: 2rem;
@@ -157,69 +158,27 @@ body {
         .container .text-container .buttons-container a:hover {
           background-color: #28B2B5;
           transition: .6s; }
-      .container .text-container .buttons-container:nth-last-of-type(1) {
-        margin-right: 2.5rem; }
-  @media (max-width: 768px) {
-    .container .project-preview {
-      width: 635px;
-      height: 500px; }
-    .container .text-container {
-      grid-template-columns: .5fr 2fr .5fr;
-      grid-template-rows: 100px 350px 200px 300px; }
-      .container .text-container h2 {
-        grid-row: 1;
-        grid-column: 2; }
-      .container .text-container p {
-        grid-row: 2;
-        grid-column: 2;
-        padding: 0;
-        font-size: 2.1rem; }
-      .container .text-container .icons-container {
-        grid-row: 3;
-        grid-column: 2; }
-      .container .text-container .buttons-container {
-        grid-row: 4;
-        grid-column: 2; } }
-  @media (max-width: 425px) {
-    .container {
-      padding-top: 115px; }
-      .container .project-preview {
-        width: 65%;
-        height: 500px;
-        background-image: url("/static/preview-phone.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        position: relative;
-        padding: 0 0 100px 0; }
-      .container .text-container {
-        grid-template-rows: 100px 350px 200px 200px; }
-        .container .text-container h2 {
-          font-size: 5.5rem; }
-        .container .text-container p {
-          font-size: 2rem; }
+      @media (max-width: 425px) {
         .container .text-container .buttons-container {
           display: flex;
-          flex-direction: column; }
-          .container .text-container .buttons-container a {
-            padding: 10px;
-            outline: none;
-            border: 4px solid #28B2B5;
-            background-color: transparent;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #fdfdfd;
-            font-size: 2rem;
-            transition: .6s;
-            font-family: "Lato", sans-serif;
-            font-weight: 600; }
-            .container .text-container .buttons-container a:nth-child(1) {
-              margin-bottom: 15px; } }
-  @media (max-width: 320px) {
-    .container {
-      padding-top: 50px; }
-      .container .text-container {
-        grid-template-rows: 100px 350px 200px 200px; } }
+          flex-direction: column;
+          margin: 0 0 20px 0; } }
+  @media (max-width: 768px) {
+    .container .text-container {
+      height: fit-content; }
+    .container .details-container {
+      flex-direction: column;
+      padding: 20px 0; }
+      .container .details-container p {
+        max-width: 700px !important;
+        margin: 15px 20px; }
+      .container .details-container .icons-container {
+        grid-template-columns: repeat(4, 55px) !important; }
+    .container .buttons-container {
+      margin-top: 0;
+      margin-bottom: 60px; }
+      .container .buttons-container a {
+        margin-bottom: 8px; } }
 
 .burger-menu {
   width: 100vw;
@@ -249,7 +208,7 @@ body {
   list-style-type: none; }
 
 .burger-menu ul li a {
-  font-size: 2em;
+  font-size: 3.2em;
   margin-bottom: 100px; }
 
 .icon-x {
