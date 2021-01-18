@@ -29,9 +29,9 @@ header {
         color: #D0D0D2;
         height: auto;
         padding: 0 10px;
-        font-size: 19px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 600; }
+        font-size: 2.2rem;
+        font-family: "Lato", sans-serif;
+        font-weight: 900; }
       @media (max-width: 425px) {
         header .navbar ul li {
           display: none; }
@@ -51,7 +51,7 @@ header {
     margin: 0;
     color: #fdfdfd;
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-weight: 900;
     font-size: 20px; }
   .contact .contact-icons a {
     color: #fdfdfd;
@@ -194,7 +194,7 @@ body {
     color: #D0D0D2;
     text-decoration: none;
     font-family: "Lato", sans-serif;
-    font-weight: 600; }
+    font-weight: 900; }
 
 .is-active {
   right: 0; }
