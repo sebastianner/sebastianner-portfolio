@@ -33,7 +33,7 @@
 
     .work-cards{
         display: grid;
-        grid-template-columns: repeat(3, 18vw);
+        grid-template-columns: repeat(3, 450px);
         gap: 20px 20px;
         justify-content: center;
         align-items: center;
@@ -108,7 +108,7 @@
         }
 
         @include media('<=1440px'){
-            grid-template-columns: repeat(auto-fill, 400px);
+            grid-template-columns: repeat(auto-fill, 450px);
         }
 
         @include media('<=572px'){
