@@ -6,6 +6,7 @@ You can find it on [sebastianner.com](http://sebastianner.com "sebastianner.com"
 - HTML5
 - CSS3
 - JavaScript
+- Sass
 - git / github
 - Adobe Xd
 
