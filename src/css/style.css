@@ -253,49 +253,55 @@ header {
     padding: 50px;
     padding-bottom: 130px; }
     .work .work-cards .card {
-      position: relative;
-      height: 40vh;
-      width: fill;
       border: 1px solid black;
       background-color: #fff;
-      box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75); }
-      .work .work-cards .card span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0);
-        display: block;
-        text-align: center;
-        transition: .6s; }
-        .work .work-cards .card span a {
-          position: relative;
-          top: 50%;
-          color: #fdfdfd;
-          text-decoration: none;
-          font-family: "Lato", sans-serif;
-          font-size: 2.5rem;
-          border: 3px solid #28B2B5;
-          border-radius: .3rem;
-          padding: .5rem;
-          transition: .6s;
-          font-weight: 750;
-          display: none; }
-          .work .work-cards .card span a:hover {
-            background-color: #28B2B5;
-            transition: .6s; }
-      .work .work-cards .card:hover span {
-        transition: .6s;
-        background-color: rgba(0, 0, 0, 0.345); }
-        .work .work-cards .card:hover span a {
-          display: initial; }
-      .work .work-cards .card:nth-of-type(1) {
-        background-color: black;
-        background-image: url("/src/static/prv8.png");
+      box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+      overflow: hidden; }
+      .work .work-cards .card .card-bg {
+        position: relative;
+        height: 40vh;
+        background-position: center;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center; }
+        transition: all 1s; }
+        .work .work-cards .card .card-bg span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0);
+          display: block;
+          text-align: center;
+          transition: .6s; }
+          .work .work-cards .card .card-bg span a {
+            position: relative;
+            top: 50%;
+            color: #fdfdfd;
+            text-decoration: none;
+            font-family: "Lato", sans-serif;
+            font-size: 2.3rem;
+            border: 3px solid #28B2B5;
+            border-radius: .3rem;
+            padding: 5px;
+            transition: .6s;
+            font-weight: 750;
+            display: none; }
+            .work .work-cards .card .card-bg span a:hover {
+              background-color: #28B2B5;
+              transition: .6s; }
+        .work .work-cards .card .card-bg:hover {
+          transform: scale(1.08); }
+          .work .work-cards .card .card-bg:hover span {
+            transition: .6s;
+            background-color: rgba(0, 0, 0, 0.345); }
+            .work .work-cards .card .card-bg:hover span a {
+              display: initial; }
+      .work .work-cards .card:nth-of-type(1) .card-bg {
+        background-color: black;
+        background-image: url("/src/static/prv8.png"); }
+      .work .work-cards .card:nth-of-type(2) .card-bg {
+        background-image: url("/src/static/sebastianner_com_card.png"); }
       @media (max-width: 425px) {
         .work .work-cards .card {
           height: 300px; } }
@@ -439,7 +445,8 @@ header {
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  scroll-behavior: smooth; }
 
 html {
   font-size: 62.5%; }

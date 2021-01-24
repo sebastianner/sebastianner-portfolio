@@ -41,63 +41,73 @@
         padding-bottom: 130px;
 
         .card{
-            position: relative;
-            height: 40vh;
-            width: fill;
             border: 1px solid black;
             background-color: #fff;
             box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+            overflow: hidden;
 
-            span{
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: rgba(0, 0, 0, 0);
-                display: block;
-                text-align: center;
-                transition: .6s;
-
-                a{
-                    position: relative;
-                    top: 50%;
-                    color: $third-text-color;
-                    text-decoration: none;
-                    font-family: $lato-font;
-                    font-size: 2.5rem;
-                    border: 3px solid $brand-color;
-                    border-radius: .3rem;
-                    padding: .5rem;
+            .card-bg{
+                position: relative;
+                height: 40vh;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                transition: all 1s;
+                span{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0, 0, 0, 0);
+                    display: block;
+                    text-align: center;
                     transition: .6s;
-                    font-weight: 750;
-                    display: none;
-
-                    &:hover{
-                        background-color: $brand-color;
+    
+                    a{
+                        position: relative;
+                        top: 50%;
+                        color: $third-text-color;
+                        text-decoration: none;
+                        font-family: $lato-font;
+                        font-size: 2.3rem;
+                        border: 3px solid $brand-color;
+                        border-radius: .3rem;
+                        padding: 5px;
                         transition: .6s;
+                        font-weight: 750;
+                        display: none;
+    
+                        &:hover{
+                            background-color: $brand-color;
+                            transition: .6s;
+                        }
                     }
                 }
-            }
 
-            &:hover{
-                span{
-                    transition: .6s;
-                    background-color: rgba(0, 0, 0, 0.345);
-                    
-                    a{
-                        display: initial;
+                &:hover{
+                    span{
+                        transition: .6s;
+                        background-color: rgba(0, 0, 0, 0.345);
+                        
+                        a{
+                            display: initial;
+                        }
                     }
+                    transform: scale(1.08);
                 }
             }
             &:nth-of-type(1){
-                background-color: black;
-                background-image: url("/src/static/prv8.png");
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: center;
+                .card-bg{                    
+                    background-color: black;
+                    background-image: url("/src/static/prv8.png");
+                }
             }
-
+            &:nth-of-type(2){
+                .card-bg{                    
+                    background-image: url("/src/static/sebastianner_com_card.png");
+                }
+            }
             @include media('<=425px'){
                 height: 300px;
             }
