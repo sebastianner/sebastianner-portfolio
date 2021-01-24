@@ -136,8 +136,9 @@ body {
       .container .text-container .details-container .icons-container {
         display: grid;
         column-gap: 10px;
-        margin: 0 30px;
-        grid-template-columns: repeat(2, 55px); }
+        /* margin: 0 30px; */
+        grid-template-columns: repeat(2, 55px);
+        }
         .container .text-container .details-container .icons-container i {
           font-size: 5.5rem; }
     .container .text-container .buttons-container {
